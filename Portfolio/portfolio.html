@@ -53,7 +53,14 @@
             I enjoy working on projects that challenge me and push me to learn new things while turning ideas into reality.
         </p1>
 <br><br>
-        
+        <!--p1>
+            I'm always exploring new technologies and staying up-to-date with the latest advancements in AI and software development. Whether it's machine learning, full-stack development, or scalable software solutions, I enjoy turning ideas into reality.
+        </p1-->
+        <!--p1>
+            I’m always exploring new technologies and staying up-to-date with advancements
+            in AI and software development. Whether it’s machine learning, full-stack development,
+            or scalable solutions, I love turning ideas into reality.
+        </p1-->
         <br>
 
 
@@ -75,7 +82,7 @@
             A web application that allows users to register. The application is developed using  Html, Css, Javascript, and MySQL.
         </p5><br><br><br>
 
-        <button onclick="show1()" id="more">View More</button>
+        <button onclick="showFields('git')" id="more">View More</button>
         <br><br>
         <form id="git" style="display: none" >
 
@@ -108,7 +115,7 @@
 
         </button>
         </form>
-        <button id="getintouch" onclick="show()">Get in touch</button>
+        <button id="getintouch" onclick="showFields('media')">Get in touch</button>
 
         <br><br><br>
 
@@ -124,19 +131,14 @@
 
 </section>
 <script>
-    function show(){
-        if (document.getElementById("media").style.display === "none") {
-            document.getElementById("media").style.display = "block";
-        } else {
-            document.getElementById("media").style.display = "none";
-        }
-    }
-    function show1(){
-        if (document.getElementById("git").style.display === "none") {
-            document.getElementById("git").style.display = "block";
-        } else {
-            document.getElementById("git").style.display = "none";
-        }
+    //Swaps the style.display of the given element
+    function showFields(elementId) {
+        const element = document.getElementById(elementId);
+        if(element.style.display==="none"){
+            element.style.display="block";
+        }else{
+            element.style.display="none";
+        }// Add or remove the 'hidden' class
     }
 </script>
 <style>
