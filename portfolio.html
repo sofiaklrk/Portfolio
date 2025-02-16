@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>My Portfolio</title>
+    <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+
+    <link rel="stylesheet" href=
+            "https://fonts.googleapis.com/icon?family=Material+Icons" />
+</head>
+
+<body>
+<header class="header">
+    <a href="#home" class="mylogo">My <span> Portfolio</span></a>
+    <nav class="navbar">
+        <a href="#home">HOME</a>
+        <a href="#about-me">ABOUT ME</a>
+        <a href="#project">PROJECTS</a>
+        <a href="#skills">SKILLS</a>
+        <a href="#contact">CONTACT</a>
+    </nav>
+</header>
+<section id="home" class="home">
+    <div class="content">
+        <h2>Hello there! I'm</h2><br>
+        <h1 class="animateBounce"> <span>Sofia Koulouraki</span></h1><br>
+        <h3 >Software Developer</h3><br>
+
+        <p>Bachelor Student in Computer Science Department | University of Crete.
+            </p><br>
+    </div>
+
+
+    <div class="right" href="#contact" >
+        <a href="#getintouch"><button id="touch" >⇾Get in touch</button></a>
+    </div>
+</section>
+
+<section id="about-me" class="about-me"  >
+    <div class="content" style="margin-left: 50%">
+        <h1>About Me</h1>
+        <p1>I am passionate about software development, AI, and web technologies.
+            I love building innovative solutions that blend creativity with technology,
+            whether it's designing intelligent systems, crafting dynamic web experiences,
+            or developing efficient software applications.</p1>
+        <br><br>
+        <p1>
+            I enjoy working on projects that challenge me and push me to learn new things while turning ideas into reality.
+        </p1>
+<br><br>
+        <!--p1>
+            I'm always exploring new technologies and staying up-to-date with the latest advancements in AI and software development. Whether it's machine learning, full-stack development, or scalable software solutions, I enjoy turning ideas into reality.
+        </p1-->
+        <!--p1>
+            I’m always exploring new technologies and staying up-to-date with advancements
+            in AI and software development. Whether it’s machine learning, full-stack development,
+            or scalable solutions, I love turning ideas into reality.
+        </p1-->
+        <br>
+
+
+
+
+        <a href="#getintouch"><button id="cv" class="animateBounce">Let's connect and build something awesome!</button></a>
+    </div>
+</section>
+<section id="project" class="project">
+    <div class="content">
+        <h1>Projects</h1><br>
+
+        <h4><li>Fire Incident Reporting System (E-199)</li></h4>
+        <p5>
+            A web application that allows users to report fire incidents. The application is developed using Java, Html, Css, Javascript, and MySQL.
+        </p5><br><br><br>
+        <h4><li>Sign Up Form</li></h4>
+        <p5>
+            A web application that allows users to register. The application is developed using  Html, Css, Javascript, and MySQL.
+        </p5><br><br><br>
+
+        <button onclick="showFields('git')" id="more">View More</button>
+        <br><br>
+        <form id="git" style="display: none" >
+
+            <a href="https://github.com/sofiaklrk/Portfolio" >github</a>
+
+
+
+        </form>
+    </div>
+</section>
+<section id="skills" class="skills">
+    <div class="content" style="margin-left: 50%">
+        <h1>Skills</h1><br>
+        <h4>1. Programming Languages</h4>
+        <p3>Java, Python, C, C++, JavaScript, Assembly</p3>
+        <h4>2. Web Technologies</h4>
+        <p3>HTML, CSS, JavaScript</p3>
+        <h4>3. Databases</h4>
+        <p3>MySQL</p3>
+    </div>
+</section>
+<section id="contact" class="contact">
+    <div class="content">
+        <h1>Contact</h1><br>
+        <p4>email: koulourakisofia@gmail.com</p4><br>
+        <p4></p4><br>
+        <form method="post" action="mailto:email.com?subject=subject&message=message">
+        <button  id="folder" type="submit">
+            <img src="https://i.ibb.co/CW5Wvry/buttonpng.png" alt="buttonpng" border="0" />
+
+        </button>
+        </form>
+        <button id="getintouch" onclick="showFields('media')">Get in touch</button>
+
+        <br><br><br>
+
+        <form id="media" style="display: none" >
+
+            <a href="https://www.facebook.com" ><i class="material-icons facebook">facebook</i></a>
+
+            <a href="https://www.linkedin.com" ><i class="material-icons linkedin">linkedin</i></a>
+
+
+        </form>
+    </div>
+
+</section>
+<script>
+    //Swaps the style.display of the given element
+    function showFields(elementId) {
+        const element = document.getElementById(elementId);
+        if(element.style.display==="none"){
+            element.style.display="block";
+        }else{
+            element.style.display="none";
+        }// Add or remove the 'hidden' class
+    }
+</script>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+    }
+
+
+    .fa {
+        padding: 20px;
+        font-size: 30px;
+        width: 50px;
+        text-align: center;
+        text-decoration: none;
+        margin: 5px 2px;
+    }
+
+    .fa:hover {
+        opacity: 0.7;
+    }
+    .fa-linkedin {
+        background: #007bb5;
+        color: white;
+    }
+
+    body {
+        color: rgb(11, 11, 11);
+    }
+
+    .header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 20px 20px;
+        padding-right: 10%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 100;
+        color: rgb(255, 255, 255);
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebucket MS', sans-serif;
+        background-color: rgba(0, 0, 0, 0.150);
+    }
+
+    .mylogo {
+        font-size: 25px;
+        color: rgba(255, 255, 255);
+        text-decoration: none;
+        font-weight: 800;
+        cursor: pointer;
+    }
+
+    .navbar a {
+        font-size: 1.1rem;
+        color: white;
+        text-decoration: none;
+        font-weight: 700;
+        margin-left: 30px;
+    }
+
+    .navbar a:hover {
+        color: #64219d;
+    }
+
+    .home {
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        align-items: center;
+        background-color: rgb(139, 139, 246);
+        padding: 70px 10%;
+        background-image: linear-gradient(to right, rgba(210, 157, 245, 0.84), rgb(118, 26, 164));
+    }
+
+    .about-me{
+
+        text-align: left;
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        align-items: center;
+        background-color: rgb(112, 112, 210);
+        padding: 70px 10%;
+        background-image: linear-gradient(to right, rgba(210, 157, 245, 0.84), rgb(118, 26, 164));
+    }
+
+    .contact{
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        align-items: center;
+        background-color: rgb(85, 85, 178);
+        padding: 70px 10%;
+        background-image: linear-gradient(to right, rgba(210, 157, 245, 0.84), rgb(118, 26, 164));
+    }
+    .project{
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        align-items: center;
+        background-color: rgb(112, 112, 210);
+        padding: 70px 10%;
+        background-image: linear-gradient(to right, rgba(210, 157, 245, 0.84), rgb(118, 26, 164));
+    }
+    .skills{
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        align-items: center;
+        background-color: rgb(112, 112, 210);
+        padding: 70px 10%;
+        background-image: linear-gradient(to right, rgba(210, 157, 245, 0.84), rgb(118, 26, 164));
+    }
+    h4{
+        color: rgba(63, 48, 101, 0.63);
+    }
+    h2{
+        color: rgba(214, 214, 250, 0.93);
+    }
+
+    .content {
+        max-width: 600px;
+    }
+
+    .content h3 {
+        font-size: 32px;
+        font-weight: 700;
+        color: rgb(219, 219, 252);
+
+        padding: 0 150px;
+    }
+
+    .content h1 {
+        font-size: 50px;
+        font-weight: 700;
+        margin: -3px 0;
+        color: #d5b6f8;
+    }
+
+    .animateBounce:hover {
+        animation: bounce 2s infinite;
+    }
+    span {
+        color: #64219d;
+    }
+
+    .content p {
+        font-size: 20px;
+        color: rgb(71, 43, 140);
+        margin: 5px 20px 30px 0;
+    }
+    .content p1 {
+        font-size: 20px;
+        color: rgb(56, 29, 122);
+        margin: 10px 15px 30px 0;
+    }
+    .content p2 {
+        font-size: 20px;
+        color: rgb(76, 38, 168);
+        margin: 10px 15px 30px 0;
+    }
+    .content p3 {
+        font-size: 20px;
+        color: rgb(59, 29, 131);
+        margin: 10px 15px 30px 0;
+    }
+    .content p4 {
+        font-size: 20px;
+        color: rgb(215, 200, 252);
+        margin: 10px 15px 30px 0;
+    }
+    .content p5 {
+        font-size: 15px;
+        color: rgba(215, 200, 252, 0.76);
+        margin: 15px 15px 30px 0;
+    }
+
+    .content button {
+        padding: 10px 20px;
+        background-color: #64219d;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        font-size: 18px;
+        font-weight: 500;
+        cursor: pointer;
+        margin-top: 20px;
+
+    }
+
+    #cv{
+        padding: 10px 20px;
+        background-color: rgba(109, 58, 155, 0.82);
+        color: white;
+        border: none;
+        border-radius: 5px;
+        font-size: 18px;
+        font-weight: 500;
+        cursor: pointer;
+        margin-top: 20px;
+
+    }
+    #cv:hover {
+        background-color: rgba(57, 13, 94, 0.78);
+    }
+
+    #touch {
+        padding:10px 10px 10px 150px ;
+        background-color: rgba(100, 33, 157, 0.77);
+        color: white;
+        border: none;
+        border-radius: 5px;
+        font-size: 18px;
+        font-weight: 500;
+        cursor: pointer;
+        margin-top: 20px;
+
+        href:"#contact"
+
+    }
+    #touch:hover {
+        background-color: rgba(57, 13, 94, 0.78);
+    }
+
+    #folder {
+        border: none;
+        cursor: pointer;
+        appearance: none;
+        background-color: inherit;
+        transition: transform 0.7s ease-in-out;
+
+        align-content: center;
+        align-self: center;
+        align-items: center;
+        margin : 4px 2px ;
+        padding: 20px;
+        border-radius: 50%;
+
+    }
+
+
+
+
+
+    button:hover {
+        transform: rotate(360deg);
+    }
+
+    img {
+        width: 70px;
+        height: 70px;
+    }
+
+    input[type='email'] {
+        padding: 10px;
+        border: 2px solid #314de4;
+        outline: none;
+        border-radius: 5px;
+        font-size: 24px;
+        color: #314de4;
+    }
+
+    .text {
+        font-size: 60px;
+        color: #314de4;
+        font-family: Arial;
+    }
+
+    .content button:hover {
+        background-color: #310e4d;
+    }
+    .image-container {
+        position: relative;
+        width: 350px;
+        height: 350px;
+        border-radius: 50%;
+        overflow: hidden;
+        margin-left: auto;
+    }
+
+    .image-container img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+
+    html {
+        scroll-behavior: smooth;
+    }
+</style>
+</body>
+</html>
